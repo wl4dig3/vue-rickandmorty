@@ -1,5 +1,6 @@
 <template>
   <div class="body">
+    <h1>Welcome to the Rick and Morty's world</h1>
     <input v-model="indice" type="text" />
 
     <div v-for="(p, i) in personajes" :key="i">
@@ -31,7 +32,7 @@ export default {
       .then((json) => {
         let data = json.results;
 
-        data.slice(0, 5).forEach((el) => {
+        data.slice(0, 10).forEach((el) => {
           let nombre = el.name;
           let picture = el.image;
 
@@ -49,9 +50,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   .body{
-    // background-image: url('/assets/ricky-bg.jpg');
-    display: flex;
-    flex-direction: column;
+.body {
+  background-image: url("../src/assets/bg-ricky.jpg");
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  h1 {
+    text-align: center;
+    color: white;
+    padding: 1rem;
   }
+}
 </style>
