@@ -1,5 +1,5 @@
 # vue-rickymorty
-
+La practica trata deun evento click  que  va eliminandose cada elemento
 ## Project setup
 ```
 yarn install
